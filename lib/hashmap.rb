@@ -61,4 +61,20 @@ class HashMap
 
     nil
   end
+
+  def length
+    size = 0
+    @buckets.each do |list|
+      size += list.size
+    end
+    size
+  end
+
+  def clear
+    @buckets.each do |list|
+      list.clear
+    end
+
+    nil
+  end
 end

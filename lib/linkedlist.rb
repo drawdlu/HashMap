@@ -13,6 +13,12 @@ module List
       @tail = nil
     end
 
+    def clear
+      @head = nil
+      @tail = nil
+      @size = 0
+    end
+
     def append(key, val)
       if @head.nil?
         @head = Node.new
