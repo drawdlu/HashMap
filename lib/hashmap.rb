@@ -48,4 +48,17 @@ class HashMap
 
     false
   end
+
+  def remove(key)
+    @buckets.each do |list|
+      next unless list.contains?(key)
+
+      index = list.find(key)
+      value = list.at(index).value
+      list.remove_at(index)
+      return value
+    end
+
+    nil
+  end
 end
