@@ -7,4 +7,4 @@ test.set('test', 'two')
 test.set('Carlos', 'yeah')
 test.set('Carla', 'no')
 
-p test
+p test.has?('test')

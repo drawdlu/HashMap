@@ -31,4 +31,21 @@ class HashMap
       bucket.append(key, value)
     end
   end
+
+  def get(key)
+    @buckets.each do |list|
+      index = list.find(key)
+      return list.at(index).value unless index.nil?
+    end
+
+    nil
+  end
+
+  def has?(key)
+    @buckets.each do |list|
+      return true if list.contains?(key)
+    end
+
+    false
+  end
 end
