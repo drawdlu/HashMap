@@ -98,4 +98,18 @@ class HashMap
 
     keys
   end
+
+  def entries
+    key_value = []
+    @buckets.each_with_index do |list, index|
+      node = list.head
+      until node.nil?
+        node_value = [node.key, node.value]
+        key_value.push(node_value)
+        node = node.next_node
+      end
+    end
+
+    key_value
+  end
 end
