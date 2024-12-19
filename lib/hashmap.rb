@@ -79,11 +79,19 @@ class HashMap
   end
 
   def keys
+    get_key_or_value('key')
+  end
+
+  def values
+    get_key_or_value('value')
+  end
+
+  def get_key_or_value(choice)
     keys = []
     @buckets.each do |list|
       node = list.head
       until node.nil?
-        keys.push(node.key)
+        keys.push(node.send(choice))
         node = node.next_node
       end
     end
