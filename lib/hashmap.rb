@@ -77,4 +77,17 @@ class HashMap
 
     nil
   end
+
+  def keys
+    keys = []
+    @buckets.each do |list|
+      node = list.head
+      until node.nil?
+        keys.push(node.key)
+        node = node.next_node
+      end
+    end
+
+    keys
+  end
 end
