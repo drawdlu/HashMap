@@ -28,7 +28,20 @@ class HashMap
       index_key = bucket.find(key)
       bucket.at(index_key).value = value
     else
-      bucket.append(key, value)
+      limit = (@capacity * @load_factor).round
+      increase_and_reset if length >= limit
+      @buckets[index].append(key, value)
+    end
+  end
+
+  def increase_and_reset
+    @capacity *= 2
+    key_value_pairs = entries
+    clear
+    @buckets = Array.new(@capacity) { LinkedList.new }
+
+    key_value_pairs.each do |pair|
+      set(pair[0], pair[1])
     end
   end
 

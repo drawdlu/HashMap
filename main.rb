@@ -15,4 +15,20 @@ test.set('jacket', 'blue')
 test.set('kite', 'pink')
 test.set('lion', 'golden')
 
+test.set('lion', 'fur')
+test.set('hat', 'test')
+test.set('ice cream', 'wef')
+test.set('jacket', 'sdf')
+
+test.set('moon', 'silver')
+
+test.set('lion', 'sdfdsf')
+test.set('hat', 'sdf')
+test.set('ice cream', 'sdfasdf')
+test.set('jacket', 'asdfsd')
+
+p test.length
+
 p test.entries
+
+p test.length
