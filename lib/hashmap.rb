@@ -114,7 +114,7 @@ class HashMap
 
   def entries
     key_value = []
-    @buckets.each_with_index do |list, index|
+    @buckets.each do |list|
       node = list.head
       until node.nil?
         node_value = [node.key, node.value]
