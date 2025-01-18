@@ -77,4 +77,12 @@ class HashSet < HashMap
 
     nil
   end
+
+  def has?(key)
+    @buckets.each do |list|
+      return true if list.include?(key)
+    end
+
+    false
+  end
 end

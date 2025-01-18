@@ -24,4 +24,4 @@ p test
 
 p test.length
 
-p test.get('jacket')
+p test.has?('sdf')
