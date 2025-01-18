@@ -20,8 +20,6 @@ test.set('asdf')
 test.set('werew')
 test.set('g4')
 
+p test.remove('apple')
+
 p test
-
-p test.length
-
-p test.has?('sdf')

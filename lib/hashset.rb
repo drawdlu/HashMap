@@ -85,4 +85,15 @@ class HashSet < HashMap
 
     false
   end
+
+  def remove(key)
+    @buckets.each do |list|
+      if list.include?(key)
+        list.delete(key)
+        return key
+      end
+    end
+
+    nil
+  end
 end
