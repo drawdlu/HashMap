@@ -10,3 +10,5 @@ test.set('dog')
 test.set('banana')
 
 p test
+
+p test.entries

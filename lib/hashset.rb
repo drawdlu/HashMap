@@ -31,4 +31,15 @@ class HashSet < HashMap
     increase_and_reset if length >= limit
     @buckets[index].append(key)
   end
+
+  def entries
+    key_value = []
+    @buckets.each do |list|
+      list.each do |key|
+        key_value.append(key)
+      end
+    end
+
+    key_value
+  end
 end
