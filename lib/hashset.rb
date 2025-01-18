@@ -4,7 +4,7 @@ require_relative 'linkedlist'
 require_relative 'hashmap'
 
 # Implements a custom hash map
-class HashSet < HashMap
+class HashSet
   include List
 
   def initialize(capacity = 16, load = 0.75)
