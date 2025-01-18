@@ -23,3 +23,5 @@ test.set('g4')
 p test
 
 p test.length
+
+p test.get('jacket')

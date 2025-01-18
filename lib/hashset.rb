@@ -69,4 +69,12 @@ class HashSet < HashMap
 
     key_value
   end
+
+  def get(key)
+    @buckets.each do |list|
+      return key if list.include?(key)
+    end
+
+    nil
+  end
 end
