@@ -7,8 +7,19 @@ test.set('apple')
 test.set('banana')
 test.set('carrot')
 test.set('dog')
-test.set('banana')
+test.set('elephant')
+test.set('frog')
+test.set('grape')
+test.set('hat')
+test.set('ice cream')
+test.set('jacket')
+test.set('kite')
+test.set('lion')
+test.set('sdfas')
+test.set('asdf')
+test.set('werew')
+test.set('g4')
 
 p test
 
-p test.entries
+p test.length

@@ -32,6 +32,33 @@ class HashSet < HashMap
     @buckets[index].append(key)
   end
 
+  def increase_and_reset
+    @capacity *= 2
+    keys = entries
+    clear
+    @buckets = Array.new(@capacity) { [] }
+
+    keys.each do |key|
+      set(key)
+    end
+  end
+
+  def length
+    size = 0
+    @buckets.each do |list|
+      size += list.size
+    end
+    size
+  end
+
+  def clear
+    @buckets.each do |list|
+      list.clear
+    end
+
+    nil
+  end
+
   def entries
     key_value = []
     @buckets.each do |list|
